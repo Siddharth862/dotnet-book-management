@@ -1,0 +1,34 @@
+﻿@model Pal_Book.Models.BookViewModel
+@{
+    ViewData["Title"] = "Edit Book";
+}
+<h2 class="text-center">Edit Book</h2>
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="BookId" />
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Author" class="form-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Genre" class="form-label"></label>
+                <input asp-for="Genre" class="form-control" />
+                <span asp-validation-for="Genre" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-success">Update</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

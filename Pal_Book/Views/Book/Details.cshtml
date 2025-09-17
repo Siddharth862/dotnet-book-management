@@ -1,0 +1,22 @@
+﻿@model Pal_Book.Models.BookViewModel
+@{
+    ViewData["Title"] = "Book Details";
+}
+<h2 class="text-center">Book Details</h2>
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <dl class="row">
+            <dt class="col-sm-3">Book Id</dt>
+            <dd class="col-sm-9">@Model.BookId</dd>
+            <dt class="col-sm-3">Title</dt>
+            <dd class="col-sm-9">@Model.Title</dd>
+            <dt class="col-sm-3">Author</dt>
+            <dd class="col-sm-9">@Model.Author</dd>
+            <dt class="col-sm-3">Genre</dt>
+            <dd class="col-sm-9">@Model.Genre</dd>
+            <dt class="col-sm-3">Price</dt>
+            <dd class="col-sm-9">@Model.Price.ToString("C")</dd>
+        </dl>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
